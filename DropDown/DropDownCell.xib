@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qv-04-pt6">
-                        <rect key="frame" x="65" y="0.0" width="135" height="65"/>
+                        <rect key="frame" x="65" y="0.0" width="37.5" height="65"/>
                         <color key="tintColor" red="0.91673413212435229" green="0.91673413212435229" blue="0.91673413212435229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -28,30 +28,28 @@
                         <nil key="highlightedColor"/>
                         <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gear" translatesAutoresizingMaskIntoConstraints="NO" id="ojt-kw-hJ4">
-                        <rect key="frame" x="0.0" y="7" width="65" height="50"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-66-AsM">
+                        <rect key="frame" x="8.5" y="8.5" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="oSW-66-AsM" secondAttribute="height" multiplier="1:1" id="UvV-Qs-Ehm"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                 <constraints>
-                    <constraint firstItem="3qv-04-pt6" firstAttribute="leading" secondItem="ojt-kw-hJ4" secondAttribute="trailing" id="0TY-Md-L4N"/>
-                    <constraint firstAttribute="trailing" secondItem="3qv-04-pt6" secondAttribute="trailing" id="6Qa-XG-EBm"/>
-                    <constraint firstItem="3qv-04-pt6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="65" id="6m0-8f-oN5"/>
-                    <constraint firstItem="3qv-04-pt6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Dhu-VU-luD"/>
-                    <constraint firstItem="ojt-kw-hJ4" firstAttribute="centerY" secondItem="3qv-04-pt6" secondAttribute="centerY" id="FcJ-Tr-rGs"/>
-                    <constraint firstItem="ojt-kw-hJ4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="Gtl-pr-GIV"/>
-                    <constraint firstAttribute="bottom" secondItem="3qv-04-pt6" secondAttribute="bottom" id="Nnk-nG-eLi"/>
-                    <constraint firstItem="ojt-kw-hJ4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OOQ-AO-OCm"/>
+                    <constraint firstItem="oSW-66-AsM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8.5" id="8GJ-hM-h62"/>
+                    <constraint firstAttribute="bottom" secondItem="oSW-66-AsM" secondAttribute="bottom" constant="8.5" id="BdR-FC-u7d"/>
+                    <constraint firstAttribute="bottom" secondItem="3qv-04-pt6" secondAttribute="bottom" id="NaC-Ua-nKG"/>
+                    <constraint firstItem="3qv-04-pt6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rqk-Wu-zrM"/>
+                    <constraint firstItem="oSW-66-AsM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8.5" id="aed-3b-nD5"/>
+                    <constraint firstItem="3qv-04-pt6" firstAttribute="leading" secondItem="oSW-66-AsM" secondAttribute="trailing" constant="8.5" id="vNn-tA-oLC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="icon" destination="ojt-kw-hJ4" id="NK9-65-9OC"/>
+                <outlet property="icon" destination="oSW-66-AsM" id="sgy-aZ-hH8"/>
                 <outlet property="menuName" destination="3qv-04-pt6" id="l6F-Yd-Jde"/>
             </connections>
             <point key="canvasLocation" x="-26" y="-2.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="gear" width="16" height="16"/>
-    </resources>
 </document>
