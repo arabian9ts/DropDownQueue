@@ -15,6 +15,7 @@
 		FF642E161F55140100A2AF5C /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E151F55140100A2AF5C /* DropDownButton.swift */; };
 		FF642E191F55148A00A2AF5C /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E171F55148A00A2AF5C /* DropDownCell.swift */; };
 		FF642E1A1F55148A00A2AF5C /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF642E181F55148A00A2AF5C /* DropDownCell.xib */; };
+		FF642E1C1F55243B00A2AF5C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E1B1F55243B00A2AF5C /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FF642E151F55140100A2AF5C /* DropDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 		FF642E171F55148A00A2AF5C /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		FF642E181F55148A00A2AF5C /* DropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
+		FF642E1B1F55243B00A2AF5C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */,
 				FF642E0C1F5512CA00A2AF5C /* LaunchScreen.storyboard */,
 				FF642E0F1F5512CA00A2AF5C /* Info.plist */,
+				FF642E1B1F55243B00A2AF5C /* Extension.swift */,
 			);
 			path = DropDown;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF642E1C1F55243B00A2AF5C /* Extension.swift in Sources */,
 				FF642E161F55140100A2AF5C /* DropDownButton.swift in Sources */,
 				FF642E061F5512CA00A2AF5C /* SampleViewController.swift in Sources */,
 				FF642E191F55148A00A2AF5C /* DropDownCell.swift in Sources */,
