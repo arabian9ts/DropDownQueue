@@ -15,15 +15,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /* --- code initializing --- */
         let dropdown = DropDownButton()
         dropdown.setImage(UIImage(named: "gear"), for: .normal)
         
+        // setup way both storyboard initializing and code initializing
         self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "first", {print("first")}))
         self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "second", {print("second")}))
         self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "third", {print("third")}))
-        
         dropdown.setup(matrixes: self.matrixes)
         
+        /* --- code initializing --- */
         let customButton: UIBarButtonItem = UIBarButtonItem(customView: dropdown)
         self.navigationItem.setRightBarButton(customButton, animated: false)
     }

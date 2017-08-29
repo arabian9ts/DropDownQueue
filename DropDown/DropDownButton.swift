@@ -9,12 +9,12 @@
 import UIKit
 
 class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
+    public var table_width: CGFloat = 120
+    public var table_height: CGFloat = 300
     private let tableview = UITableView()
     private var icons: [UIImage] = []
     private var descriptions: [String] = []
     private var actions: [() -> Void] = []
-    var table_height: CGFloat = 300
-    var table_width: CGFloat = 120
     private var isClosed: Bool = true
     
     // storyboard
@@ -32,21 +32,26 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
         self.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
     }
     
-    func initDropDown() -> Void {
+    /* --- initialize dropdown table --- */
+    private func initDropDown() -> Void {
         self.addTarget(self, action: #selector(self.toggle), for: UIControlEvents.touchUpInside)
         self.tableview.delegate = self
         self.tableview.dataSource = self
         
         let nib = UINib(nibName: "DropDownCell", bundle: nil)
         tableview.register(nib, forCellReuseIdentifier: "dropdown")
+        
+        /* --- tableview setting --- */
         self.tableview.isScrollEnabled = false
         self.tableview.tableHeaderView = UIView()
         self.tableview.tableFooterView = UIView()
-
+        
+        // adjust tableview height
         self.table_height = (self.tableview.visibleCells.last?.bounds.maxY)! * CGFloat(descriptions.count)
     }
     
-    func setup(matrixes: [DropDownMatrix]) -> Void {
+    /* --- cell setting --- */
+    public func setup(matrixes: [DropDownMatrix]) -> Void {
         for matrix in matrixes {
             self.icons.append(matrix.icon!)
             self.descriptions.append(matrix.description!)
@@ -55,6 +60,7 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
         self.initDropDown()
     }
     
+    /* --- get front most vc --- */
     func frontmost() -> UIView? {
         if let frontmost = UIApplication.frontmost() {
             return frontmost.view
@@ -62,6 +68,7 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
         return nil
     }
     
+    /* ==================== callback START ==================== */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row <= actions.count {
             self.actions[indexPath.row]()
@@ -84,19 +91,26 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+    /* ===================== callback END ===================== */
     
+    /* --- open/close dropdown --- */
     func toggle() {
         let frontmost = self.frontmost()
+        
+        // open
         if isClosed {
             self.tableview.frame = CGRect(
                 x: (frontmost?.bounds.size.width)!-self.table_width,
                 y: -table_height,
                 width: self.table_width,
                 height: self.table_height)
+            
             self.tableview.separatorStyle = .none
             self.tableview.separatorInset = .zero
+            
             frontmost?.addSubview(self.tableview)
             self.tableview.alpha = 0.0
+            
             UIView.animate(withDuration: 0.2, animations: {_ in
                 self.tableview.frame = CGRect(
                     x: (frontmost?.bounds.size.width)!-self.table_width,
@@ -106,6 +120,8 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
                 self.tableview.alpha = 1.0
             })
         }
+        
+        // close
         else {
             UIView.animate(withDuration: 0.2, animations: {_ in
                 self.tableview.frame = CGRect(
