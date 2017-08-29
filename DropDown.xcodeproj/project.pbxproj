@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF642E041F5512CA00A2AF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E031F5512CA00A2AF5C /* AppDelegate.swift */; };
-		FF642E061F5512CA00A2AF5C /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E051F5512CA00A2AF5C /* SampleViewController.swift */; };
+		FF642E061F5512CA00A2AF5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E051F5512CA00A2AF5C /* ViewController.swift */; };
 		FF642E091F5512CA00A2AF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF642E071F5512CA00A2AF5C /* Main.storyboard */; };
 		FF642E0B1F5512CA00A2AF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */; };
 		FF642E0E1F5512CA00A2AF5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF642E0C1F5512CA00A2AF5C /* LaunchScreen.storyboard */; };
@@ -21,12 +21,12 @@
 /* Begin PBXFileReference section */
 		FF642E001F5512CA00A2AF5C /* DropDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF642E031F5512CA00A2AF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF642E051F5512CA00A2AF5C /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		FF642E051F5512CA00A2AF5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF642E081F5512CA00A2AF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF642E0D1F5512CA00A2AF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF642E0F1F5512CA00A2AF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF642E151F55140100A2AF5C /* DropDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		FF642E151F55140100A2AF5C /* DropDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		FF642E171F55148A00A2AF5C /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		FF642E181F55148A00A2AF5C /* DropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
 		FF642E1B1F55243B00A2AF5C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 				FF642E181F55148A00A2AF5C /* DropDownCell.xib */,
 				FF642E151F55140100A2AF5C /* DropDownButton.swift */,
 				FF642E031F5512CA00A2AF5C /* AppDelegate.swift */,
-				FF642E051F5512CA00A2AF5C /* SampleViewController.swift */,
+				FF642E051F5512CA00A2AF5C /* ViewController.swift */,
 				FF642E071F5512CA00A2AF5C /* Main.storyboard */,
 				FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */,
 				FF642E0C1F5512CA00A2AF5C /* LaunchScreen.storyboard */,
@@ -152,7 +152,7 @@
 			files = (
 				FF642E1C1F55243B00A2AF5C /* Extension.swift in Sources */,
 				FF642E161F55140100A2AF5C /* DropDownButton.swift in Sources */,
-				FF642E061F5512CA00A2AF5C /* SampleViewController.swift in Sources */,
+				FF642E061F5512CA00A2AF5C /* ViewController.swift in Sources */,
 				FF642E191F55148A00A2AF5C /* DropDownCell.swift in Sources */,
 				FF642E041F5512CA00A2AF5C /* AppDelegate.swift in Sources */,
 			);
