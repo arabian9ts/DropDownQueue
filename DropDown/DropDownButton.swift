@@ -9,27 +9,27 @@
 import UIKit
 
 class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
-    let tableview = UITableView()
-    let items: [String]? = ["aiueo", "kkk", "girje", "fleapg"]
+    private let tableview = UITableView()
+    private var icons: [UIImage] = []
+    private var descriptions: [String] = []
+    private var actions: [() -> Void] = []
     var table_height: CGFloat = 300
     var table_width: CGFloat = 120
-    var isClosed: Bool = true
+    private var isClosed: Bool = true
     
     // storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.initDropDown()
     }
     
     // code
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.initDropDown()
     }
     
     // code
     convenience init() {
-        self.init(frame: CGRect(x: 0, y: 0, width: 150, height: 300))
+        self.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
     }
     
     func initDropDown() -> Void {
@@ -43,8 +43,16 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
         self.tableview.tableHeaderView = UIView()
         self.tableview.tableFooterView = UIView()
 
-        self.table_height = (self.tableview.visibleCells.last?.bounds.maxY)! * CGFloat((items?.count)!)
-        print(self.tableview.visibleCells)
+        self.table_height = (self.tableview.visibleCells.last?.bounds.maxY)! * CGFloat(descriptions.count)
+    }
+    
+    func setup(matrixes: [DropDownMatrix]) -> Void {
+        for matrix in matrixes {
+            self.icons.append(matrix.icon!)
+            self.descriptions.append(matrix.description!)
+            self.actions.append(matrix.action!)
+        }
+        self.initDropDown()
     }
     
     func frontmost() -> UIView? {
@@ -55,18 +63,25 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        if indexPath.row <= actions.count {
+            self.actions[indexPath.row]()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items!.count
+        return descriptions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DropDownCell = tableview.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath) as! DropDownCell
         cell.contentView.backgroundColor = UIColor(red: 0.176, green: 0.21, blue: 0.286, alpha: 1.0)
         cell.selectionStyle = .none
-        cell.menuName.text = items?[indexPath.row]
+        
+        if self.icons.count == self.descriptions.count && indexPath.row <= self.icons.count {
+            cell.icon.image = self.icons[indexPath.row]
+            cell.menuName.text = descriptions[indexPath.row]
+        }
+
         return cell
     }
     
