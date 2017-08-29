@@ -45,6 +45,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="icon" destination="ojt-kw-hJ4" id="NK9-65-9OC"/>
                 <outlet property="menuName" destination="3qv-04-pt6" id="l6F-Yd-Jde"/>
             </connections>
             <point key="canvasLocation" x="-26" y="-2.5"/>
