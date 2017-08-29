@@ -20,6 +20,13 @@
 		FFD215511F55B33100A473A2 /* DropDown.h in Headers */ = {isa = PBXBuildFile; fileRef = FFD2154F1F55B33100A473A2 /* DropDown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFD215541F55B33100A473A2 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD2154D1F55B33100A473A2 /* DropDown.framework */; };
 		FFD215551F55B33100A473A2 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFD2154D1F55B33100A473A2 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FFD215EC1F55D8F100A473A2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFD215501F55B33100A473A2 /* Info.plist */; };
+		FFD215ED1F55D8FA00A473A2 /* DropDownMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA11A401F55559800BFA90B /* DropDownMatrix.swift */; };
+		FFD215EE1F55D90200A473A2 /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E151F55140100A2AF5C /* DropDownButton.swift */; };
+		FFD215EF1F55D90600A473A2 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E171F55148A00A2AF5C /* DropDownCell.swift */; };
+		FFD215F01F55D90900A473A2 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF642E181F55148A00A2AF5C /* DropDownCell.xib */; };
+		FFD215F11F55D90F00A473A2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E1B1F55243B00A2AF5C /* Extension.swift */; };
+		FFD215F21F55D92100A473A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +243,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD215F01F55D90900A473A2 /* DropDownCell.xib in Resources */,
+				FFD215F21F55D92100A473A2 /* Assets.xcassets in Resources */,
+				FFD215EC1F55D8F100A473A2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD215EE1F55D90200A473A2 /* DropDownButton.swift in Sources */,
+				FFD215EF1F55D90600A473A2 /* DropDownCell.swift in Sources */,
+				FFD215ED1F55D8FA00A473A2 /* DropDownMatrix.swift in Sources */,
+				FFD215F11F55D90F00A473A2 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +406,7 @@
 		FF642E131F5512CA00A2AF5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6U5H77AN3Z;
 				INFOPLIST_FILE = DropDownQueue/Info.plist;
@@ -405,6 +420,7 @@
 		FF642E141F5512CA00A2AF5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6U5H77AN3Z;
 				INFOPLIST_FILE = DropDownQueue/Info.plist;
@@ -487,6 +503,7 @@
 				FFD215581F55B33100A473A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
