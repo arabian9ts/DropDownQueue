@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF642E001F5512CA00A2AF5C /* DropDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF642E001F5512CA00A2AF5C /* DropDownQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropDownQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF642E031F5512CA00A2AF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF642E051F5512CA00A2AF5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF642E081F5512CA00A2AF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		FF642DF71F5512CA00A2AF5C = {
 			isa = PBXGroup;
 			children = (
-				FF642E021F5512CA00A2AF5C /* DropDown */,
+				FF642E021F5512CA00A2AF5C /* DropDownQueue */,
 				FF642E011F5512CA00A2AF5C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,35 +56,35 @@
 		FF642E011F5512CA00A2AF5C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF642E001F5512CA00A2AF5C /* DropDown.app */,
+				FF642E001F5512CA00A2AF5C /* DropDownQueue.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF642E021F5512CA00A2AF5C /* DropDown */ = {
+		FF642E021F5512CA00A2AF5C /* DropDownQueue */ = {
 			isa = PBXGroup;
 			children = (
+				FF642E031F5512CA00A2AF5C /* AppDelegate.swift */,
+				FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */,
+				FF642E151F55140100A2AF5C /* DropDownButton.swift */,
 				FF642E171F55148A00A2AF5C /* DropDownCell.swift */,
 				FF642E181F55148A00A2AF5C /* DropDownCell.xib */,
-				FF642E151F55140100A2AF5C /* DropDownButton.swift */,
-				FF642E031F5512CA00A2AF5C /* AppDelegate.swift */,
-				FF642E051F5512CA00A2AF5C /* ViewController.swift */,
-				FF642E071F5512CA00A2AF5C /* Main.storyboard */,
-				FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */,
-				FF642E0C1F5512CA00A2AF5C /* LaunchScreen.storyboard */,
-				FF642E0F1F5512CA00A2AF5C /* Info.plist */,
-				FF642E1B1F55243B00A2AF5C /* Extension.swift */,
 				FFA11A401F55559800BFA90B /* DropDownMatrix.swift */,
+				FF642E1B1F55243B00A2AF5C /* Extension.swift */,
+				FF642E0F1F5512CA00A2AF5C /* Info.plist */,
+				FF642E0C1F5512CA00A2AF5C /* LaunchScreen.storyboard */,
+				FF642E071F5512CA00A2AF5C /* Main.storyboard */,
+				FF642E051F5512CA00A2AF5C /* ViewController.swift */,
 			);
-			path = DropDown;
+			path = DropDownQueue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FF642DFF1F5512CA00A2AF5C /* DropDown */ = {
+		FF642DFF1F5512CA00A2AF5C /* DropDownQueue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF642E121F5512CA00A2AF5C /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildConfigurationList = FF642E121F5512CA00A2AF5C /* Build configuration list for PBXNativeTarget "DropDownQueue" */;
 			buildPhases = (
 				FF642DFC1F5512CA00A2AF5C /* Sources */,
 				FF642DFD1F5512CA00A2AF5C /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = DropDown;
+			name = DropDownQueue;
 			productName = DropDown;
-			productReference = FF642E001F5512CA00A2AF5C /* DropDown.app */;
+			productReference = FF642E001F5512CA00A2AF5C /* DropDownQueue.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FF642DFB1F5512CA00A2AF5C /* Build configuration list for PBXProject "DropDown" */;
+			buildConfigurationList = FF642DFB1F5512CA00A2AF5C /* Build configuration list for PBXProject "DropDownQueue" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -129,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF642DFF1F5512CA00A2AF5C /* DropDown */,
+				FF642DFF1F5512CA00A2AF5C /* DropDownQueue */,
 			);
 		};
 /* End PBXProject section */
@@ -171,6 +171,7 @@
 				FF642E081F5512CA00A2AF5C /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		FF642E0C1F5512CA00A2AF5C /* LaunchScreen.storyboard */ = {
@@ -179,6 +180,7 @@
 				FF642E0D1F5512CA00A2AF5C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -284,7 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6U5H77AN3Z;
-				INFOPLIST_FILE = DropDown/Info.plist;
+				INFOPLIST_FILE = DropDownQueue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arabian9ts.SimpleAudio.DropDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6U5H77AN3Z;
-				INFOPLIST_FILE = DropDown/Info.plist;
+				INFOPLIST_FILE = DropDownQueue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arabian9ts.SimpleAudio.DropDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -308,7 +310,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF642DFB1F5512CA00A2AF5C /* Build configuration list for PBXProject "DropDown" */ = {
+		FF642DFB1F5512CA00A2AF5C /* Build configuration list for PBXProject "DropDownQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF642E101F5512CA00A2AF5C /* Debug */,
@@ -317,7 +319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF642E121F5512CA00A2AF5C /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+		FF642E121F5512CA00A2AF5C /* Build configuration list for PBXNativeTarget "DropDownQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF642E131F5512CA00A2AF5C /* Debug */,
