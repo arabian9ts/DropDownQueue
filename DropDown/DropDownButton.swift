@@ -10,66 +10,97 @@ import UIKit
 
 class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
     let tableview = UITableView()
-    let items: [String] = ["アラーム", "退出"]
-    var table_height: CGFloat = 150
+    let items: [String]? = ["aiueo", "kkk", "girje", "fleapg"]
+    var table_height: CGFloat = 300
     var table_width: CGFloat = 120
     var isClosed: Bool = true
-    var root: UIView = UIView()
     
-    override init(frame: CGRect) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+    // storyboard
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.initDropDown()
     }
     
-    init(view: UIView) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        root = view
-        tableview.delegate = self
-        tableview.dataSource = self
+    // code
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.initDropDown()
+    }
+    
+    // code
+    convenience init() {
+        self.init(frame: CGRect(x: 0, y: 0, width: 150, height: 300))
+    }
+    
+    func initDropDown() -> Void {
+        self.addTarget(self, action: #selector(self.toggle), for: UIControlEvents.touchUpInside)
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
+        
         let nib = UINib(nibName: "DropDownCell", bundle: nil)
         tableview.register(nib, forCellReuseIdentifier: "dropdown")
-        
-        tableview.layoutIfNeeded()
-        self.table_height = tableview.contentSize.height
-        self.table_width = tableview.contentSize.width
-//        tableview.frame = CGRect(x: root.bounds.size.width-120, y: -table_height, width: 120, height: table_height)
-        print("bounds: \(tableview.bounds.size.height)")
-        print("content: \(tableview.contentSize.height)")
-        tableview.frame = CGRect(x: root.bounds.size.width-table_width, y: -table_height, width: table_width, height: table_height)
-        
-        tableview.tableFooterView = UIView()
-        root.addSubview(tableview)
-        
-        self.setImage(UIImage(named: "direction_down"), for: UIControlState.normal)
-        self.addTarget(self, action: #selector(DropDownButton.toggle), for: UIControlEvents.touchUpInside)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+        self.tableview.isScrollEnabled = false
+        self.tableview.tableHeaderView = UIView()
+        self.tableview.tableFooterView = UIView()
 
+        self.table_height = (self.tableview.visibleCells.last?.bounds.maxY)! * CGFloat((items?.count)!)
+        print(self.tableview.visibleCells)
+    }
+    
+    func frontmost() -> UIView? {
+        if let frontmost = UIApplication.frontmost() {
+            return frontmost.view
+        }
+        return nil
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(items[indexPath.row])
+        print(indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DropDownCell = tableview.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath) as! DropDownCell
-        cell.menuName.text = items[indexPath.row]
+        cell.contentView.backgroundColor = UIColor(red: 0.176, green: 0.21, blue: 0.286, alpha: 1.0)
+        cell.menuName.text = items?[indexPath.row]
         return cell
     }
     
     func toggle() {
+        let frontmost = self.frontmost()
         if isClosed {
+            self.tableview.frame = CGRect(
+                x: (frontmost?.bounds.size.width)!-self.table_width,
+                y: -table_height,
+                width: self.table_width,
+                height: self.table_height)
+            self.tableview.separatorStyle = .none
+            self.tableview.separatorInset = .zero
+            frontmost?.addSubview(self.tableview)
+            self.tableview.alpha = 0.0
             UIView.animate(withDuration: 0.2, animations: {_ in
-                self.tableview.frame = CGRect(x: self.root.bounds.size.width-120, y: 64, width: 120, height: self.table_height)})
+                self.tableview.frame = CGRect(
+                    x: (frontmost?.bounds.size.width)!-self.table_width,
+                    y: 64,
+                    width: self.table_width,
+                    height: self.table_height);
+                self.tableview.alpha = 1.0
+            })
         }
         else {
             UIView.animate(withDuration: 0.2, animations: {_ in
-                self.tableview.frame = CGRect(x: self.root.bounds.size.width-120, y: -self.table_height, width: 120, height: self.table_height)})
+                self.tableview.frame = CGRect(
+                    x: (frontmost?.bounds.size.width)!-self.table_width,
+                    y: -self.table_height,
+                    width: self.table_width,
+                    height: self.table_height);
+                self.tableview.alpha = 0.0
+            }, completion: {_ in
+                self.tableview.removeFromSuperview()
+            })
         }
         isClosed = !isClosed
     }
