@@ -23,22 +23,22 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     }
     
     // code
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
     
     // code
-    convenience init() {
+    convenience public init() {
         self.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
     }
     
     /* --- initialize dropdown table --- */
     private func initDropDown() -> Void {
-        self.addTarget(self, action: #selector(self.toggle), for: UIControlEvents.touchUpInside)
+        self.addTarget(self, action: #selector(DropDownButton.self.toggle), for: UIControlEvents.touchUpInside)
         self.tableview.delegate = self
         self.tableview.dataSource = self
         
-        let nib = UINib(nibName: "DropDownCell", bundle: nil)
+        let nib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownButton.self))
         tableview.register(nib, forCellReuseIdentifier: "dropdown")
         
         /* --- tableview setting --- */
@@ -61,7 +61,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     }
     
     /* --- get front most vc --- */
-    func frontmost() -> UIView? {
+    private func frontmost() -> UIView? {
         if let frontmost = UIApplication.frontmost() {
             return frontmost.view
         }
@@ -94,7 +94,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     /* ===================== callback END ===================== */
     
     /* --- open/close dropdown --- */
-    func toggle() {
+    @objc private func toggle() {
         let frontmost = self.frontmost()
         
         // open

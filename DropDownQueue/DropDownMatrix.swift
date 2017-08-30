@@ -14,11 +14,13 @@ public struct DropDownMatrix {
     var description: String?
     var action: (() -> Void)?
     
-    init() {
+    /*
+    public init() {
         self.init(UIImage(named: "gear"), "None", {print("not initialized")})
     }
+     */
     
-    init(_ icon: UIImage?, _ description: String?, _ action: (() -> Void)?) {
+    public init(_ icon: UIImage?, _ description: String?, _ action: (() -> Void)?) {
         self.icon = icon
         self.description = description
         self.action = action

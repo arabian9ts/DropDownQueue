@@ -12,21 +12,16 @@
 		FF642E091F5512CA00A2AF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF642E071F5512CA00A2AF5C /* Main.storyboard */; };
 		FF642E0B1F5512CA00A2AF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */; };
 		FF642E0E1F5512CA00A2AF5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF642E0C1F5512CA00A2AF5C /* LaunchScreen.storyboard */; };
-		FF642E161F55140100A2AF5C /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E151F55140100A2AF5C /* DropDownButton.swift */; };
-		FF642E191F55148A00A2AF5C /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E171F55148A00A2AF5C /* DropDownCell.swift */; };
-		FF642E1A1F55148A00A2AF5C /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF642E181F55148A00A2AF5C /* DropDownCell.xib */; };
 		FF642E1C1F55243B00A2AF5C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E1B1F55243B00A2AF5C /* Extension.swift */; };
-		FFA11A411F55559800BFA90B /* DropDownMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA11A401F55559800BFA90B /* DropDownMatrix.swift */; };
 		FFD215511F55B33100A473A2 /* DropDown.h in Headers */ = {isa = PBXBuildFile; fileRef = FFD2154F1F55B33100A473A2 /* DropDown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFD215541F55B33100A473A2 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD2154D1F55B33100A473A2 /* DropDown.framework */; };
 		FFD215551F55B33100A473A2 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFD2154D1F55B33100A473A2 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFD215EC1F55D8F100A473A2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFD215501F55B33100A473A2 /* Info.plist */; };
-		FFD215ED1F55D8FA00A473A2 /* DropDownMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA11A401F55559800BFA90B /* DropDownMatrix.swift */; };
 		FFD215EE1F55D90200A473A2 /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E151F55140100A2AF5C /* DropDownButton.swift */; };
 		FFD215EF1F55D90600A473A2 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E171F55148A00A2AF5C /* DropDownCell.swift */; };
 		FFD215F01F55D90900A473A2 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF642E181F55148A00A2AF5C /* DropDownCell.xib */; };
 		FFD215F11F55D90F00A473A2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E1B1F55243B00A2AF5C /* Extension.swift */; };
-		FFD215F21F55D92100A473A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */; };
+		FFD216321F56B7A700A473A2 /* DropDownMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA11A401F55559800BFA90B /* DropDownMatrix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,7 +229,6 @@
 			files = (
 				FF642E0E1F5512CA00A2AF5C /* LaunchScreen.storyboard in Resources */,
 				FF642E0B1F5512CA00A2AF5C /* Assets.xcassets in Resources */,
-				FF642E1A1F55148A00A2AF5C /* DropDownCell.xib in Resources */,
 				FF642E091F5512CA00A2AF5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD215F01F55D90900A473A2 /* DropDownCell.xib in Resources */,
-				FFD215F21F55D92100A473A2 /* Assets.xcassets in Resources */,
 				FFD215EC1F55D8F100A473A2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,11 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF642E1C1F55243B00A2AF5C /* Extension.swift in Sources */,
-				FF642E161F55140100A2AF5C /* DropDownButton.swift in Sources */,
 				FF642E061F5512CA00A2AF5C /* ViewController.swift in Sources */,
-				FF642E191F55148A00A2AF5C /* DropDownCell.swift in Sources */,
 				FF642E041F5512CA00A2AF5C /* AppDelegate.swift in Sources */,
-				FFA11A411F55559800BFA90B /* DropDownMatrix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +261,8 @@
 			files = (
 				FFD215EE1F55D90200A473A2 /* DropDownButton.swift in Sources */,
 				FFD215EF1F55D90600A473A2 /* DropDownCell.swift in Sources */,
-				FFD215ED1F55D8FA00A473A2 /* DropDownMatrix.swift in Sources */,
 				FFD215F11F55D90F00A473A2 /* Extension.swift in Sources */,
+				FFD216321F56B7A700A473A2 /* DropDownMatrix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,12 +431,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = DropDown/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arabian9ts.dropdownqueue.DropDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -463,12 +455,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = DropDown/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arabian9ts.dropdownqueue.DropDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
