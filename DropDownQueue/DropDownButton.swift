@@ -18,8 +18,8 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     private var isClosed: Bool = true
     
     // storyboard
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    required public convenience init?(coder aDecoder: NSCoder) {
+        self.init()
     }
     
     // code
