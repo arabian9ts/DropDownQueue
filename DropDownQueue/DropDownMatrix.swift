@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct DropDownMatrix {
+public struct DropDownMatrix {
     var icon: UIImage?
     var description: String?
     var action: (() -> Void)?

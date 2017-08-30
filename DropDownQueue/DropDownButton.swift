@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
+public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
     public var table_width: CGFloat = 120
     public var table_height: CGFloat = 300
     private let tableview = UITableView()
@@ -18,7 +18,7 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
     private var isClosed: Bool = true
     
     // storyboard
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -69,17 +69,17 @@ class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
     }
     
     /* ==================== callback START ==================== */
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row <= actions.count {
             self.actions[indexPath.row]()
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return descriptions.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DropDownCell = tableview.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath) as! DropDownCell
         cell.contentView.backgroundColor = UIColor(red: 0.176, green: 0.21, blue: 0.286, alpha: 1.0)
         cell.selectionStyle = .none

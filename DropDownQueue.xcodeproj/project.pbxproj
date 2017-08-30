@@ -411,7 +411,7 @@
 				DEVELOPMENT_TEAM = 6U5H77AN3Z;
 				INFOPLIST_FILE = DropDownQueue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = arabian9ts.SimpleAudio.DropDown;
+				PRODUCT_BUNDLE_IDENTIFIER = arabian9ts.dropdown.DropDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -425,7 +425,7 @@
 				DEVELOPMENT_TEAM = 6U5H77AN3Z;
 				INFOPLIST_FILE = DropDownQueue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = arabian9ts.SimpleAudio.DropDown;
+				PRODUCT_BUNDLE_IDENTIFIER = arabian9ts.dropdown.DropDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

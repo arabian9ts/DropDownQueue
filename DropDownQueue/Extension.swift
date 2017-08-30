@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
     // return frontmost vc
     static func frontmost(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let navigationController = controller as? UINavigationController {
