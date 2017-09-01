@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF4C04291F5996EF009D194C /* DropDownDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C04271F5996E5009D194C /* DropDownDelegate.swift */; };
 		FF642E041F5512CA00A2AF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E031F5512CA00A2AF5C /* AppDelegate.swift */; };
 		FF642E061F5512CA00A2AF5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF642E051F5512CA00A2AF5C /* ViewController.swift */; };
 		FF642E091F5512CA00A2AF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF642E071F5512CA00A2AF5C /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FF4C04271F5996E5009D194C /* DropDownDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownDelegate.swift; sourceTree = "<group>"; };
 		FF642E001F5512CA00A2AF5C /* DropDownQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropDownQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF642E031F5512CA00A2AF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF642E051F5512CA00A2AF5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		FF642E021F5512CA00A2AF5C /* DropDownQueue */ = {
 			isa = PBXGroup;
 			children = (
+				FF4C04271F5996E5009D194C /* DropDownDelegate.swift */,
 				FF642E031F5512CA00A2AF5C /* AppDelegate.swift */,
 				FF642E0A1F5512CA00A2AF5C /* Assets.xcassets */,
 				FF642E151F55140100A2AF5C /* DropDownButton.swift */,
@@ -263,6 +266,7 @@
 				FFD215EF1F55D90600A473A2 /* DropDownCell.swift in Sources */,
 				FFD215F11F55D90F00A473A2 /* Extension.swift in Sources */,
 				FFD216321F56B7A700A473A2 /* DropDownMatrix.swift in Sources */,
+				FF4C04291F5996EF009D194C /* DropDownDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
