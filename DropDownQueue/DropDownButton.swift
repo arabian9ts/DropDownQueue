@@ -87,7 +87,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     
     /* ==================== callback START ==================== */
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.selectedItem(tableView.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath) as! DropDownCell)
+        self.delegate?.selectedItem(tableView.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath) as! DropDownCell, indexPath.row)
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

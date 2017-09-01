@@ -9,6 +9,5 @@
 import Foundation
 
 public protocol DropDownDelegate {
-    func selectedAt(_ index: Int)
-    func selectedItem(_ dropDown: DropDownCell)
+    func selectedItem(_ dropDown: DropDownCell, _ index: Int)
 }
