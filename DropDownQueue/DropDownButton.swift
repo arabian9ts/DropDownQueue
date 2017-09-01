@@ -55,6 +55,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     public func setImages(on: UIImage?, off: UIImage?) -> Void {
         self.onImage = on
         self.offImage = off
+        self.setImage(self.offImage, for: .normal)
     }
     
     /* --- initialize dropdown table --- */
