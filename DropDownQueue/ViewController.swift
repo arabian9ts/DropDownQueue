@@ -37,9 +37,9 @@ class ViewController: UIViewController, DropDownDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    func selectedItem(_ dropDown: DropDownCell, _ index: Int) {
+    func selectedItem(_ dropDownCell: DropDownCell, _ index: Int) {
         print(index)
-        print(dropDown.menuName.text)
+        print(dropDownCell.menuName.text!)
     }
 }
 
