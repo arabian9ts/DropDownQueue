@@ -39,7 +39,7 @@ class ViewController: UIViewController, DropDownDelegate {
     
     func selectedItem(_ dropDown: DropDownCell, _ index: Int) {
         print(index)
-        print(dropDown.menuName)
+        print(dropDown.menuName.text)
     }
 }
 
