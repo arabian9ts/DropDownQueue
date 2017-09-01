@@ -21,9 +21,9 @@ class ViewController: UIViewController {
         dropdown.setImages(on: UIImage(), off: UIImage(named: "gear"))
         
         // setup way both storyboard initializing and code initializing
-        self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "first", {print("first")}))
-        self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "second", {print("second")}))
-        self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "third", {print("third")}))
+        self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "first"))
+        self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "second"))
+        self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "third"))
         dropdown.setup(matrixes: self.matrixes)
         
         /* --- code initializing --- */

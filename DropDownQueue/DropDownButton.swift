@@ -11,10 +11,11 @@ import UIKit
 public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
     public var table_width: CGFloat = 120
     public var table_height: CGFloat = 300
+    public var delegate: DropDownDelegate?
+    
     private let tableview = UITableView()
     private var icons: [UIImage] = []
     private var descriptions: [String] = []
-    private var actions: [() -> Void] = []
     private var isClosed: Bool = true
     private var offImage: UIImage? = nil
     private var onImage: UIImage? = nil
@@ -41,7 +42,6 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
         for matrix in matrixes {
             self.icons.append(matrix.icon!)
             self.descriptions.append(matrix.description!)
-            self.actions.append(matrix.action!)
         }
         self.initDropDown()
     }
@@ -87,9 +87,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     
     /* ==================== callback START ==================== */
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row <= actions.count {
-            self.actions[indexPath.row]()
-        }
+
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
