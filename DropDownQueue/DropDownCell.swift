@@ -10,8 +10,8 @@ import UIKit
 
 public class DropDownCell: UITableViewCell {
     
-    @IBOutlet weak var icon: UIImageView!
-    @IBOutlet weak var menuName: UILabel!
+    @IBOutlet weak public var icon: UIImageView!
+    @IBOutlet weak public var menuName: UILabel!
 
     override public func awakeFromNib() {
         super.awakeFromNib()

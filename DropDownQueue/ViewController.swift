@@ -9,7 +9,7 @@
 import UIKit
 import DropDown
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DropDownDelegate {
     
     var matrixes: [DropDownMatrix] = []
     
@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         
         /* --- code initializing --- */
         let dropdown = DropDownButton()
+        dropdown.delegate = self
+        
         dropdown.setImages(on: UIImage(), off: UIImage(named: "gear"))
         
         // setup way both storyboard initializing and code initializing
@@ -33,6 +35,11 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func selectedItem(_ dropDown: DropDownCell, _ index: Int) {
+        print(index)
+        print(dropDown.menuName)
     }
 }
 
