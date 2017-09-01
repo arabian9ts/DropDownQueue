@@ -16,6 +16,8 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     private var descriptions: [String] = []
     private var actions: [() -> Void] = []
     private var isClosed: Bool = true
+    private var offImage: UIImage? = nil
+    private var onImage: UIImage? = nil
     
     // storyboard
     required public convenience init?(coder aDecoder: NSCoder) {
@@ -30,6 +32,29 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     // code
     convenience public init() {
         self.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+    }
+    
+    /* =============== Public Functions =============== */
+    
+    /* --- cell setting --- */
+    public func setup(matrixes: [DropDownMatrix]) -> Void {
+        for matrix in matrixes {
+            self.icons.append(matrix.icon!)
+            self.descriptions.append(matrix.description!)
+            self.actions.append(matrix.action!)
+        }
+        self.initDropDown()
+    }
+    
+    /* ============= Public Functions END ============= */
+    
+    
+    /* ============== Private Functions =============== */
+    
+    /* --- set hilight images --- */
+    public func setImages(on: UIImage?, off: UIImage?) -> Void {
+        self.onImage = on
+        self.offImage = off
     }
     
     /* --- initialize dropdown table --- */
@@ -50,16 +75,6 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
         self.table_height = (self.tableview.visibleCells.last?.bounds.maxY)! * CGFloat(descriptions.count)
     }
     
-    /* --- cell setting --- */
-    public func setup(matrixes: [DropDownMatrix]) -> Void {
-        for matrix in matrixes {
-            self.icons.append(matrix.icon!)
-            self.descriptions.append(matrix.description!)
-            self.actions.append(matrix.action!)
-        }
-        self.initDropDown()
-    }
-    
     /* --- get front most vc --- */
     private func frontmost() -> UIView? {
         if let frontmost = UIApplication.frontmost() {
@@ -67,6 +82,8 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
         }
         return nil
     }
+    
+    /* ============ Private Functions END ============= */
     
     /* ==================== callback START ==================== */
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -99,6 +116,10 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
         
         // open
         if isClosed {
+            if self.onImage != nil {
+                self.setImage(self.onImage, for: .normal)
+            }
+            
             self.tableview.frame = CGRect(
                 x: (frontmost?.bounds.size.width)!-self.table_width,
                 y: -table_height,
@@ -123,6 +144,10 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
         
         // close
         else {
+            if self.offImage != nil {
+                self.setImage(self.offImage, for: .normal)
+            }
+            
             UIView.animate(withDuration: 0.2, animations: {_ in
                 self.tableview.frame = CGRect(
                     x: (frontmost?.bounds.size.width)!-self.table_width,
