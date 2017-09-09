@@ -21,6 +21,7 @@ class ViewController: UIViewController, DropDownDelegate {
         dropdown.delegate = self
         
         dropdown.setImages(on: UIImage(), off: UIImage(named: "gear"))
+        dropdown.cellColor = UIColor(red: 100/255, green: 190/255, blue: 250/255, alpha: 1)
         
         // setup way both storyboard initializing and code initializing
         self.matrixes.append(DropDownMatrix(UIImage(named: "gear"), "first"))
