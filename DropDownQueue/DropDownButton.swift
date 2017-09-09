@@ -11,6 +11,7 @@ import UIKit
 public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
     public var table_width: CGFloat = 120
     public var table_height: CGFloat = 300
+    public var cellColor: UIColor? = UIColor(red: 0.176, green: 0.21, blue: 0.286, alpha: 1.0)
     public var delegate: DropDownDelegate?
     
     private let tableview = UITableView()
@@ -97,7 +98,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DropDownCell = tableview.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath) as! DropDownCell
-        cell.contentView.backgroundColor = UIColor(red: 0.176, green: 0.21, blue: 0.286, alpha: 1.0)
+        cell.contentView.backgroundColor = self.cellColor
         cell.selectionStyle = .none
         
         if self.icons.count == self.descriptions.count && indexPath.row <= self.icons.count {
