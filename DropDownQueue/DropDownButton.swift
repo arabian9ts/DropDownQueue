@@ -13,6 +13,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     public var font_color: UIColor = .green
     public var table_width: CGFloat = 120
     public var table_height: CGFloat = 300
+    public var cell_height: CGFloat = 50
     public var cellColor: UIColor? = UIColor(red: 0.176, green: 0.21, blue: 0.286, alpha: 1.0)
     public var delegate: DropDownDelegate?
     
@@ -74,6 +75,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
         self.tableview.isScrollEnabled = false
         self.tableview.tableHeaderView = UIView()
         self.tableview.tableFooterView = UIView()
+        self.tableview.rowHeight = self.cell_height
         
         // adjust tableview height
         self.table_height = (self.tableview.visibleCells.last?.bounds.maxY)! * CGFloat(descriptions.count)
