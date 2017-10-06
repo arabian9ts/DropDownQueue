@@ -10,6 +10,7 @@ import UIKit
 
 public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
     public var font_size: CGFloat = 20
+    public var font_color: UIColor = .green
     public var table_width: CGFloat = 120
     public var table_height: CGFloat = 300
     public var cellColor: UIColor? = UIColor(red: 0.176, green: 0.21, blue: 0.286, alpha: 1.0)
@@ -106,6 +107,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
             cell.icon.image = self.icons[indexPath.row]
             cell.menuName.text = descriptions[indexPath.row]
             cell.menuName.font = cell.menuName.font.withSize(self.font_size)
+            cell.menuName.textColor = font_color
         }
 
         return cell
