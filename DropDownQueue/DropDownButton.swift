@@ -9,6 +9,7 @@
 import UIKit
 
 public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSource {
+    public var isClosed: Bool = true
     public var font_size: CGFloat = 20
     public var font_color: UIColor = .green
     public var table_width: CGFloat = 120
@@ -20,7 +21,6 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     private let tableview = UITableView()
     private var icons: [UIImage] = []
     private var descriptions: [String] = []
-    private var isClosed: Bool = true
     private var offImage: UIImage? = nil
     private var onImage: UIImage? = nil
     
@@ -117,7 +117,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
     /* ===================== callback END ===================== */
     
     /* --- open/close dropdown --- */
-    @objc private func toggle() {
+    @objc public func toggle() {
         let frontmost = self.frontmost()
         
         // open
