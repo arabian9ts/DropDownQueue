@@ -141,7 +141,7 @@ public class DropDownButton: UIButton, UITableViewDelegate, UITableViewDataSourc
             UIView.animate(withDuration: 0.2, animations: {_ in
                 self.tableview.frame = CGRect(
                     x: (frontmost?.bounds.size.width)!-self.table_width,
-                    y: 64,
+                    y: 0,
                     width: self.table_width,
                     height: self.table_height);
                 self.tableview.alpha = 1.0
